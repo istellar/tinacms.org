@@ -2,8 +2,8 @@
 title: Alerts
 prev: /docs/ui/inline-editing
 next: /docs/ui/styles
+last_edited: '2021-01-25T05:32:27.284Z'
 ---
-
 The CMS' **alerts** feature allows you to display short, ephemeral messages to users.
 
 Display an alert by calling one of the **alert level methods** on the CMS object, and passing in your message.
@@ -12,9 +12,7 @@ Display an alert by calling one of the **alert level methods** on the CMS object
 cms.alerts.info('This is an alert')
 ```
 
-{{ AlertTest type="info" message="This is an alert"}}
-
-## Alert Levels
+> ##### evels
 
 The CMS supports four alert levels: `success`, `info`, `warn`, and `error`. Each alert level is its own method on `cms.alerts`; call the corresponding method with your message to trigger the appropriate alert.
 
