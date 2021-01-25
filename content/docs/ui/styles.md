@@ -1,15 +1,15 @@
 ---
 title: Styles
 prev: /docs/ui/alerts
-next:
+next: null
+last_edited: '2021-01-25T05:31:47.800Z'
 ---
-
 The `@tinacms/styles` package serves as the foundation for all Tina UI components. It contains a number of related elements:
 
-- Definitions for a range of CSS custom properties that define color, spacing, sizing & timing of Tina components.
-- `Theme` — this contains `GlobalStyles` (for Tina CSS custom properties) and a `FontLoader` for [Inter](https://rsms.me/inter/).
-- `ResetStyles`— a wrapper component that applies `TinaResetStyles` CSS.
-- The `Button` & `IconButton` components which are used throughout Tina.
+* Definitions for a range of CSS custom properties that define color, spacing, sizing & timing of Tina components.
+* `Theme` — this contains `GlobalStyles` (for Tina CSS custom properties) and a `FontLoader` for [Inter](https://rsms.me/inter/).
+* `ResetStyles`— a wrapper component that applies `TinaResetStyles` CSS.
+* The `Button` & `IconButton` components which are used throughout Tina.
 
 ## CSS Custom Properties
 
@@ -121,7 +121,7 @@ By default, the `TinaProvider` component will add the `Theme` to your project. Y
 
 ### Example: Load styles based on environment variable
 
-**pages/\_app.js**
+**pages/_app.js**
 
 ```js
 import App from 'next/app'
@@ -150,7 +150,7 @@ In this example, the Tina `Theme` won't render in production. This means the CSS
 
 ### Example: Only load _GlobalStyles_
 
-**pages/\_app.js**
+**pages/_app.js**
 
 ```js
 import React from 'react'
@@ -170,9 +170,5 @@ export default class Site extends App {
         <TinaStyles />
         <Component {...pageProps} />
       </TinaProvider>
-    )
-  }
-}
+   
 ```
-
-In this example, only the `GlobalStyles`(as `TinaStyles`) are manually imported and rendered, while the **'Inter' font will not load**.
